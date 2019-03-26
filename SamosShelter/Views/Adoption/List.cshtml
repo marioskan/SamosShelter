@@ -1,0 +1,26 @@
+﻿
+<div>
+    <h2>Available animals are shown here</h2>
+</div>
+
+<h2>@Model.CurrentCategory</h2>
+
+@{
+    foreach (var adoption in Model.Animals)
+    {
+        
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <img src="@adoption.Image" alt=""/>
+                    <div class="caption">
+                        <h3>Age: @adoption.Age.ToString("n")</h3>
+                        <h3>
+                            <a>@adoption.Name</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+       
+    }
+}
+
